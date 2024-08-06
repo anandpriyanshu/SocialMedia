@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SideBar = () => {
+const SideBar = ({ selectedTab, setselecteTab }) => {
     return (
         <>
             <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar" style={{ width: '280px' }}>
@@ -10,14 +10,17 @@ const SideBar = () => {
                 </a>
                 <hr />
                 <ul className="nav nav-pills flex-column mb-auto">
-                    <li className="nav-item">
-                        <a href="#" className="nav-link active" aria-current="page">
-                            <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
+                    <li className="nav-item" onClick={() => setselecteTab('Home')}>
+                        <a href="Home" className={`nav-link text-white ${selectedTab === 'Home' && 'active'}  `}>
+
+
+
+                            <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#table"></use></svg>
                             Home
                         </a>
                     </li>
-                    <li>
-                        <a href="#" className="nav-link text-white">
+                    <li onClick={() => setselecteTab('CreatePost')}>
+                        <a href="CreatePost" className={`nav-link text-white ${selectedTab === 'CreatePost' && 'active'}  `}>
                             <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#speedometer2"></use></svg>
                             Create Post
                         </a>
@@ -55,7 +58,7 @@ const SideBar = () => {
                         <li><a className="dropdown-item" href="#">Sign out</a></li>
                     </ul>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
