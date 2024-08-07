@@ -8,7 +8,7 @@ import CardList from './components/CardList'
 import PostListProvider from './store/post-list-store'
 const App = () => {
 
-  const [selectedTab, setselecteTab] = useState(" ")
+  const [selectedTab, setselecteTab] = useState("Home")
   return (
 
     <PostListProvider>

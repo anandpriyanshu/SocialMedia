@@ -11,7 +11,7 @@ const SideBar = ({ selectedTab, setselecteTab }) => {
                 <hr />
                 <ul className="nav nav-pills flex-column mb-auto">
                     <li className="nav-item" onClick={() => setselecteTab('Home')}>
-                        <a href="Home" className={`nav-link text-white ${selectedTab === 'Home' && 'active'}  `}>
+                        <a href="#" className={`nav-link text-white ${selectedTab === 'Home' && 'active'}  `}>
 
 
 
@@ -20,7 +20,7 @@ const SideBar = ({ selectedTab, setselecteTab }) => {
                         </a>
                     </li>
                     <li onClick={() => setselecteTab('CreatePost')}>
-                        <a href="CreatePost" className={`nav-link text-white ${selectedTab === 'CreatePost' && 'active'}  `}>
+                        <a href="#" className={`nav-link text-white ${selectedTab === 'CreatePost' && 'active'}  `}>
                             <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#speedometer2"></use></svg>
                             Create Post
                         </a>
