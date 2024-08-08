@@ -14,9 +14,7 @@ const postListReducer = (currPostList, action) => {
     let newPostList = currPostList
 
     if (action.type === 'DELETE_POST') {
-        newPostList = currPostList.filter((card) =>
-            card.id !== action.payload.postId
-        )
+        newPostList = currPostList.filter((card) => card.id !== action.payload.postId)
     }
     return newPostList
 }
