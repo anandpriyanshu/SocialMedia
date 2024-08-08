@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+
 import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -6,9 +6,11 @@ import SideBar from './components/SideBar'
 import CreatePost from './components/CreatePost'
 import CardList from './components/CardList'
 import PostListProvider from './store/post-list-store'
+import { useState } from 'react'
 const App = () => {
 
   const [selectedTab, setselecteTab] = useState("Home")
+
   return (
 
     <PostListProvider>

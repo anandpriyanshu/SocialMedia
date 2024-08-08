@@ -54,7 +54,7 @@ const DEFAULT_POST_LIST = [
         body: '4 saal naa padh ke bhi pass ho gye. Chilll out!',
         reactions: 10,
         userId: 'user-4',
-        tags: ['Graduating', 'Unbelievable', 'Pass']
+        tags: ['Graduating', 'Unbelievable']
 
     }
 ]
