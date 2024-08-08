@@ -22,8 +22,6 @@ const PostListProvider = ({ children }) => {
     const addPost = () => {
 
     }
-
-
     const deletePost = () => {
 
     }
