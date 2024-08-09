@@ -1,6 +1,6 @@
 
 
-const WelcomeMessage = ({ onGetPostsClick }) => {
+const WelcomeMessage = () => {
     return (
 
         // <center>
@@ -14,7 +14,7 @@ const WelcomeMessage = ({ onGetPostsClick }) => {
                     <div className="col-lg-6 mx-auto">
                         <p className="fs-5 mb-4">Quickly design Posts and customize in your own way</p>
                     </div>
-                    <button onClick={onGetPostsClick} type="button" className="btn btn-primary">Get Posts from server</button>
+
                 </div>
             </div>
         </>

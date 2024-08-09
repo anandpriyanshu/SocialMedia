@@ -1,37 +1,38 @@
-import { useContext, useEffect } from "react"
+import { useContext, useEffect, useState } from "react"
 import Card from "./Card"
 import { PostList } from "../store/post-list-store"
 import WelcomeMessage from "./WelcomeMessage"
+import Loading from "./Loading"
 
 const CardList = () => {
 
     const { postList, addInitialPosts } = useContext(PostList)
 
-    const handleGetPostclick = () => {
-        // console.log("data get")
+    const [fetching, setfetching] = useState(false)
+
+    useEffect(() => {
+
+        setfetching(true)
         fetch('https://dummyjson.com/posts')
             .then(res => res.json())
             .then((data) => {
                 addInitialPosts(data.posts)
+                setfetching(false)
             })
 
-    }
+    }, [])
+
 
     return (
         <>
-            {
-                postList.length === 0 && <WelcomeMessage onGetPostsClick={handleGetPostclick} />
-            }
+
+            {fetching && <Loading />}
+
+            {!fetching && postList.length === 0 && <WelcomeMessage />}
 
             <center>
-
                 <div className="cardslot">
-
-                    {
-                        postList.map((post) => (
-                            <Card key={post.id} card={post} />
-                        ))
-                    }
+                    {!fetching && postList.map((post) => (<Card key={post.id} card={post} />))}
                 </div>
             </center>
 
