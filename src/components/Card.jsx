@@ -8,7 +8,7 @@ const Card = ({ card }) => {
 
 
         <div className="card post-card" style={{ width: "30rem" }}>
-            {/* <img src="..." className="card-img-top" alt="..." /> */}
+
             <div className="card-body ">
                 <h5 className="card-title" > {card.title}
                     <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"

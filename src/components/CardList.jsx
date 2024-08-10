@@ -20,6 +20,9 @@ const CardList = () => {
                 setfetching(false)
             })
 
+        return () => {
+            console.log('Component killed')
+        }
     }, [])
 
 
