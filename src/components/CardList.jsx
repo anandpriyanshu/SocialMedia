@@ -24,7 +24,7 @@ const CardList = () => {
 
         return () => {
             console.log('Component killed')
-            controller.abort()
+            // controller.abort()
         }
     }, [])
 
