@@ -17,14 +17,15 @@ const Card = ({ card }) => {
                     </span>
 
                 </h5>
-                <p className="card-text">{(card.body).slice(0, 150) + '.....'}</p>
+                <p className="card-text">{`${card.body.slice(0, 150)}...`} </p>
+
 
                 {card.tags.map((tag) => (
                     <span key={tag} className="badge text-bg-primary hashtag">{tag}</span>
                 ))}
 
                 <div className="alert alert-success reactions" role="alert">
-                    This post has been reacted by {card.reactions} people
+                    This post has been reacted by {card.reactions.likes} people
                 </div>
             </div>
         </div>
