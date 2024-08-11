@@ -10,23 +10,23 @@ const CardList = () => {
 
     const [fetching, setfetching] = useState(false)
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        setfetching(true)
-        const controller = new AbortController()
-        const signal = controller.signal
-        fetch('https://dummyjson.com/posts', { signal })
-            .then(res => res.json())
-            .then((data) => {
-                addInitialPosts(data.posts)
-                setfetching(false)
-            })
+    //     setfetching(true)
+    //     const controller = new AbortController()
+    //     const signal = controller.signal
+    //     fetch('https://dummyjson.com/posts', { signal })
+    //         .then(res => res.json())
+    //         .then((data) => {
+    //             addInitialPosts(data.posts)
+    //             setfetching(false)
+    //         })
 
-        return () => {
-            console.log('Component killed')
-            // controller.abort()
-        }
-    }, [])
+    //     return () => {
+    //         console.log('Component killed')
+    //         // controller.abort()
+    //     }
+    // }, [])
 
 
     return (

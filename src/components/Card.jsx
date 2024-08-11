@@ -24,7 +24,7 @@ const Card = ({ card }) => {
                 ))}
 
                 <div className="alert alert-success reactions" role="alert">
-                    This post has been reacted by {card.reactions.likes} people
+                    This post has been reacted by {card.reactions} people
                 </div>
             </div>
         </div>
