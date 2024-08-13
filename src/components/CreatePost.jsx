@@ -1,7 +1,10 @@
 import React, { useContext, useRef } from 'react'
 import { PostList } from '../store/post-list-store'
+import { useNavigate } from 'react-router-dom'
 
 const CreatePost = () => {
+
+    const navigate = useNavigate()
 
 
     const { addPost } = useContext(PostList)
@@ -42,7 +45,10 @@ const CreatePost = () => {
             })
         })
             .then(res => res.json())
-            .then(post => addPost(post));
+            .then((post) => {
+                addPost(post)
+                navigate('/')
+            });
 
         ;
     }
